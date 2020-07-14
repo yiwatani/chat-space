@@ -1,13 +1,13 @@
 .SideBar
   .LeftHeader
     .LeftHeader__user-name
-      iwtn
+      = current_user.name
     .LeftHeader__icons
       .LeftHeader__icons__left
         = link_to '#', class: "icon1" do
           = icon('fas', 'edit')
       .LeftHeader__icons__right
-        = link_to '#', class: "icon2" do
+        = link_to edit_user_path(current_user), class: "icon2" do
           = icon('fas', 'cog')
   .GroupList
     .GroupList__name
