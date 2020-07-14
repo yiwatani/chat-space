@@ -1,0 +1,38 @@
+.Chat
+  .RightHeader
+    .RightHeader__group
+      .RightHeader__group__name
+        test
+      .RightHeader__group__member
+        Member : iwtn
+    .RightHeader__editButton
+      = link_to "#" do
+        Edit
+  .MessageField
+    .MessageBox
+      .upper
+        .user
+          iwtn
+        .date
+          2020/07/13(Mon) 17:50:01
+      .message
+        おはよう！
+    .MessageBox
+      .upper
+        .user
+          iwtn
+        .date
+          2020/07/13(Mon) 17:50:30
+      .message
+        今日は夜から雨
+
+  .Footer
+    %form.Form
+      .Form__contents
+        %input.inputContent{placeholder: 'type a message', type: "text"}
+        %label{class: "inputImage"}
+          = icon('far', 'image')
+          %input{type: "file", class: "inputFile"}
+      %input.Form__submit{type: "submit", value: "Send"}
+      
+
