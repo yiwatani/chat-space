@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+
+  .SideBar {
+    height: 100vh;
+    width: 300px;
+    color: #ffffff;
+    .LeftHeader {
+      height: 100px;
+      font-weight: bold;
+      background-color: #253141;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__user-name {
+        font-size: 16px;
+        padding-left: 20px;
+      }
+      &__icons {
+        width: 60px;
+        display: flex;
+        &__left {
+          .icon1 {
+            color: #ffffff;
+          }
+          }
+        &__right {
+          .icon2 {
+            margin-left: 5px;
+            color: #ffffff;
+        }
+        }
+      }
+    }
+    .GroupList {
+      height: calc(100% - 100px);
+      background-color: #2f3e51;
+      padding-left: 20px;
+      &__name {
+        font-size: 15px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+      }
+      &__message {
+        font-size: 11px;
+
+      }
+    }
+  }
+
+  .Chat {
+    height: 100vh;
+    width: calc(100vw - 300px);
+    .RightHeader {
+        height: 100px;
+        border-bottom: 1px solid #eeeeee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__group {
+          margin-left: 40px;
+          &__name {
+            font-size: 20px;
+            color: #333333;
+            margin-top: 35px;
+            margin-bottom: 15px;
+          }
+          &__member {
+            font-size: 12px;
+            color: #999999;
+          }
+        }
+        &__editButton {
+          a {
+            display: block;
+            border: 1px solid #38AEF0;
+            color: #38AEF0;
+            height: 40px;
+            margin-right: 40px;
+            line-height: 40px;
+            padding: 0 20px;
+            text-decoration: none;
+          }
+        }
+    }
+    .MessageField {
+      height: calc(100vh - 190px);
+      background-color: #fafafa;
+      padding: 35px 0 0 40px;
+      .MessageBox {
+        margin-bottom: 46px;
+        .upper {
+          display: flex;
+          .user {
+            font-size: 16px;
+            color: #333333;
+          }
+          .date {
+            font-size: 12px;
+            color: #999999;
+            padding-left: 10px;
+          }
+        }
+        .message {
+          font-size: 14px;
+          color: #434a54;
+          margin-top: 12px;
+        }
+      }
+    }
+    .Footer {
+      height: 90px;
+      background-color: #d2d2d2;
+      padding: 20px 50px 20px 40px;
+      .Form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__contents {
+          width: 100%;
+          background-color: #fff;
+          position: relative;
+          .inputContent {
+            border: none;
+            height: 50px;
+            width: 100%;
+            padding: 0 45px 0 15px;
+          }
+          .inputImage {
+            height: 50px;
+            position: absolute;
+            font-size: 25px;
+            right: 10px;
+            line-height: 50px;
+            .inputFile {
+              display: none;
+            }
+          }
+        }
+        &__submit {
+          height: 50px;
+          font-size: 16px;
+          background-color: #38aef0;
+          color: #fff;
+          padding: 0 30px;
+          margin-left: 15px;
+          border: none;
+        }
+      }
+    }
+  }
+}
