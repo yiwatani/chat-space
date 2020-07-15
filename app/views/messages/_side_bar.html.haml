@@ -4,13 +4,16 @@
       = current_user.name
     .LeftHeader__icons
       .LeftHeader__icons__left
-        = link_to '#', class: "icon1" do
+        = link_to new_group_path, class: "icon1" do
           = icon('fas', 'edit')
       .LeftHeader__icons__right
         = link_to edit_user_path(current_user), class: "icon2" do
           = icon('fas', 'cog')
   .GroupList
-    .GroupList__name
-      techcamp
-    .GroupList__message
-      まだメッセージがありません
+    - current_user.groups.each do |group|
+      .Group
+        = link_to '#' do
+          .Group__name
+            = group.name
+          .Group__message
+            メッセージはまだありません
