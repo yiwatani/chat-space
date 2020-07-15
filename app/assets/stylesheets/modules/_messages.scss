@@ -39,15 +39,21 @@
     .GroupList {
       height: calc(100% - 100px);
       background-color: #2f3e51;
-      padding-left: 20px;
-      &__name {
-        font-size: 15px;
-        padding-top: 20px;
-        padding-bottom: 5px;
-      }
-      &__message {
-        font-size: 11px;
-
+      padding-left: 0 20px;
+      .Group{
+        box-sizing: border-box;
+        padding: 20px 0 40px;
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+        &__name {
+          font-size: 15px;
+        }
+        &__message {
+          font-size: 11px;
+          margin-top: 5px;
+        }
       }
     }
   }
